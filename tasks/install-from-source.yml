@@ -31,6 +31,7 @@
 - name: Ensure the Redis extension is present in PHP's configuration.
   copy:
     src: redis.ini
-    dest: "{{ php_extension_conf_paths[0] }}/redis.ini"
+    dest: "{{ item }}/redis.ini"
     mode: 0644
   notify: restart webserver
+  with_items: "{{ php_extension_conf_paths }}"

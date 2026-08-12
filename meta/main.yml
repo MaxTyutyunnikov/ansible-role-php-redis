@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - geerlingguy.php
+  - MaxTyutyunnikov.php
 
 galaxy_info:
   role_name: php-redis
